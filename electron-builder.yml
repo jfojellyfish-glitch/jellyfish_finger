@@ -1,0 +1,37 @@
+appId: com.example.jellydream
+productName: Jelly Dream
+copyright: Copyright © 2026 YOUR NAME
+
+directories:
+  output: release
+  buildResources: build
+
+# 只打包运行必需的东西
+files:
+  - electron/**
+  - app/**
+  - package.json
+
+mac:
+  category: public.app-category.entertainment
+  icon: build/icon.icns
+  target:
+    - target: dmg
+      arch: [arm64, x64]
+  # 没有开发者证书就保持 null,electron-builder 会跳过签名
+  identity: null
+  extendInfo:
+    # macOS 弹权限框时显示的文案,必须有,否则应用会直接崩
+    NSCameraUsageDescription: 需要摄像头来识别你的手势。画面只在本机处理,不会上传或保存。
+
+win:
+  icon: build/icon.ico
+  target:
+    - target: nsis
+      arch: [x64]
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  shortcutName: Jelly Dream

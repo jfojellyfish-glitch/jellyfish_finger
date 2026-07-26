@@ -1,0 +1,24 @@
+{
+  "name": "jelly-dream",
+  "productName": "Jelly Dream",
+  "version": "0.1.0",
+  "description": "用手势指挥一群水母 —— 摄像头手势交互装置",
+  "license": "MIT",
+  "author": "YOUR NAME <you@example.com>",
+  "homepage": "https://github.com/YOUR_NAME/jelly-dream",
+  "main": "electron/main.js",
+  "scripts": {
+    "postinstall": "node scripts/vendor.mjs",
+    "vendor": "node scripts/vendor.mjs",
+    "serve": "node scripts/serve.mjs",
+    "start": "electron .",
+    "dist": "electron-builder",
+    "dist:mac": "electron-builder --mac",
+    "dist:win": "electron-builder --win"
+  },
+  "devDependencies": {
+    "@mediapipe/hands": "0.4.1646424915",
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8"
+  }
+}
