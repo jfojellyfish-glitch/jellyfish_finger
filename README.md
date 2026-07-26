@@ -1,6 +1,6 @@
 # jellyfish finger
 
-> 又名 Jelly Dream。初始页是钩织(crochet)白线风。
+> 又名 Jelly Dream。
 
 用手势指挥一群水母。摄像头识别你的手,食指指尖走到哪里,水母就游向哪里。
 
